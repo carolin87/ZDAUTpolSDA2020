@@ -1,1 +1,1 @@
-plik rebase
+plik rebase musi zawierac wartosci
