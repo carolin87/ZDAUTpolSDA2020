@@ -1,1 +1,1 @@
-plik z nowej gałęzi
+plik z nowej gałęzi branch-conflict-2
