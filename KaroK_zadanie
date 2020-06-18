@@ -1,0 +1,54 @@
+#!/bin/bash
+
+kalkulator () {
+read -p "podaj liczbę a: " a
+read -p "podaj liczbę b: " b
+echo "Dodawanie: $((a + b))"
+echo "Odejmowanie: $((a - b))"
+echo "Mnożenie: $((a * b))"
+echo "Dzielenie: $((a / b))"
+echo "Potęgowanie: $((a ** b))"
+echo "Dzielenie modulo: $((a % b))"
+}
+petla () {
+while true; do
+read -p "Czy jesteś pełnoletni?" result
+case ${result} in
+y|Yes|yes|YES|tak|t)
+echo "ok"
+continue;;
+n|no|No|NO|nie)
+echo "brak dostępu - game over :P"
+break;;
+esac
+done
+}
+dzien () {
+echo "Jaki dzisiaj dzień tygodnia?"
+a=$(date '+%u')
+
+case $a in
+"1")
+echo "poniedziałek";;
+"2")
+echo "wtorek";;
+"3")
+echo "środa";;
+"4")
+echo "czwartek";;
+"5")
+echo "piątek";;
+"6")
+echo "sobota";;
+"7")
+echo "niedziela";;
+esac
+}
+case ${1} in
+ kalkulator) kalkulator;;
+ petla) petla;;
+ dzien) dzien;;
+ *) echo "Wybierz w argumencie: kalkulator, petla czy dzien tygodnia?";;
+ esac
+
+
